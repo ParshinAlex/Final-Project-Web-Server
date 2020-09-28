@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>IndexPage</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="assets/js/articles.js"></script>
+</head>
+<body link="white">
+
+	<section id="header" class="clearfix">
+		<div class="logo">
+			Main Page
+		</div>
+		<nav>
+			<ul class="main-menu">
+				<li class="menu-item">
+					<a href="#">
+						About Author
+					</a>
+				</li>
+				<li class="menu-item"> 
+					<a href="#">
+						Forum
+					</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">
+						Contacts
+						
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="logIn">
+			<span>{{ .Login }} &#160</span>
+			<a href="loggingForm" class="logIn">Log In</a>
+		</div>
+	</section>
+
+	<section id="admin" class="clearfix-admin">
+		<button class="admin-button">
+			Новость
+		</button>
+	</section>
+
+	<section id="news-list">
+
+		<h1>Новости</h1>
+
+		<div class="news">
+
+			{{range .Articles}}
+				<div class="test-item">
+					<h3>{{.Title}}</h3>
+					<p class="test-text">{{.Text}}</p>
+					<p>{{.Date}}</p>
+				</div>
+			{{end}}
+		</div>
+
+	</section>
+
+</body>
+</html>
+

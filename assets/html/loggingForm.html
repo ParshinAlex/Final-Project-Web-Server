@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>Logging</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/loggingForm.js"></script>
+
+</head>
+
+<body>
+
+  <section id="header" class="clearfix">
+    <div class="logo">
+      Logging Page
+    </div>
+    <nav>
+      <ul class="main-menu">
+        <li class="menu-item">
+          <a href="assets/html/index.html">
+            Main Page
+          </a>
+        </li>
+        <li class="menu-item"> 
+          <a href="#">
+            About Author
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            Forum
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <form class="form auth" method="POST" action="/authorisation">
+    <p>
+      <input class="container" type="text" name="login" placeholder="Login">
+    </p>
+
+    <p>
+      <input class="container" type="password" maxlength="25" name="password" placeholder="Password">
+    </p>
+
+    <p>
+      <button id='auth-bt' class="post" type="submit">
+        Authorise
+      </button>
+    </p>
+
+    <p>
+      <label>Don't have an account?</label>
+    </p>
+
+  <div class="change-form-bt go-to-reg-form-bt">Register</div>
+
+  </form>
+
+  <form class="form reg" method="POST" action="/registration">
+  <p>
+    <input class="container" type="text" name="login" placeholder="Login">
+  </p>
+
+  <p>
+    <input class="container" type="password" maxlength="25" name="password" placeholder="Password">
+  </p>
+
+  <p>
+    <button id='reg-bt' class="post" type="submit">
+      Register
+    </button>
+  </p>
+
+  <p>
+    <label>Already registered?</label>
+  </p>
+
+  <div class="change-form-bt go-to-auth-form-bt">Go to the authorisation page</div>
+
+</form>
+
+</body>
+
+</html>
